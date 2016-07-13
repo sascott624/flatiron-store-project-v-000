@@ -1,0 +1,5 @@
+<h1>Item Index</h1>
+<ul> <% @items.each do |item| %>
+  <li><strong><%= item.title %></strong> - <%= number_to_currency(item.price.to_f/100) %> </li>
+<% end %>
+</ul>
