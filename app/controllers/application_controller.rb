@@ -12,7 +12,6 @@ class ApplicationController < ActionController::Base
       current_cart = current_user.current_cart
     elsif current_user
       current_cart = Cart.create
-      current_cart.user = current_user
       current_user.current_cart = current_cart
       current_user.save
       current_cart.save
